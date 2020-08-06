@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SPRING | GB SMART</title>
+       <!--   <link rel="icon" type="image/x-icon" href="public/assets/images/favicons/favicon.ico" />-->
+     <!--    <link rel="icon" type="image/png" href="public/assets/images/favicons/favicon.png" /> -->
+        <!-- For iPhone 4 Retina display: -->
+     <!--    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="public/assets/images/favicons/apple-touch-icon-114x114-precomposed.png">-->
+        <!-- For iPad: -->
+      <!--   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="public/assets/images/favicons/apple-touch-icon-72x72-precomposed.png">-->
+        <!-- For iPhone: -->
+     <!--    <link rel="apple-touch-icon-precomposed" href="public/assets/images/favicons/apple-touch-icon-60x60-precomposed.png"
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
+       
+        <link rel="stylesheet" th:href="@{../public/assets/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/theme.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/color-defaults.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-beige-black.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-black-beige.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-black-white.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-black-yellow.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-blue-white.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-green-white.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-red-white.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-white-black.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-white-blue.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-white-green.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-white-red.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/swatch-yellow-black.min.css}" />
+        <link rel="stylesheet" th:href="@{../public/assets/css/fonts.min.css}" /> -->
+          <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/theme.min.css" />
+        <link rel="stylesheet"  href="/public/assets/css/color-defaults.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-beige-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-beige.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-yellow.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-blue-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-green-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-red-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-blue.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-green.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-red.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-yellow-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/fonts.min.css" />
+    </head>
+    <body>
+        <header id="masthead" class="navbar navbar-sticky swatch-red-white" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="" class="navbar-brand">
+                      <!--   <img src="public/assets/images/logo.png" alt="One of the best themes ever">--> Gestion Formation Spring
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse main-navbar" role="navigation">
+                    <div class="sidebar-widget widget_search pull-right">
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Search here....">
+                                <span class="input-group-btn">
+                            <button class="btn" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown ">
+                            <a th:href="@{/Lieu/liste}">Lieu</a>
+                            
+                        </li>
+                         <li class="dropdown ">
+                            <a th:href="@{/Formation/liste}">Formation</a>
+                            
+                        </li>
+                         <li class="">
+                        
+                            <a th:href="@{/logout}">Deconnexion</a>
+                        
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="section swatch-white-red has-top">
+                
+                <div class="container ">
+                    <header class="section-header underline">
+                        <h1 class="headline super hairline">Liste des Lieux</h1>
+                    </header>
+                    <div class="row-fluid col-md-6">
+                        <div class="span6">
+                      
+                            <table class="table table-hover">
+                                <thead>
+						           <tr>
+						              <th>IDENTIFIANT</th>
+						              <th>NOM LIEU</th>
+						              <th>ACTION</th>
+						              <th>ACTION</th>
+						          </tr>
+                                </thead>
+                                <tbody>
+                                 <tr th:each="l:${liste_lieux}" >
+                                 <td th:text="${l.id}"></td>
+                                 <td th:text="${l.nom}"></td>
+                              <!--    <td th:text="${l.user.nom}"></td>-->  
+                                 <td>
+            					 <a class="waves-effect waves-light btn" th:href="@{/Lieu/edit/(id=${l.id})}"> editer</a>
+                                 </td>
+                                 <td>
+                                 <a class="waves-effect RED-light btn pink accent-3" th:href="@{/Lieu/delete/(id=${l.id})}"> delete</a>
+                                </td>
+                                 </tr>
+                                </tbody>
+                            </table>
+         
+                        </div>
+                    </div>
+                    <div class="row-fluid col-md-6">
+                        <div class="span6">
+                      
+                            
+                                 <form  method="Post" th:action="@{/Lieu/add}" th:object="${lieu}"  class="contact-form">
+                                 <div class="form-group form-icon-group">
+                                 <label for="exampleFormControlSelect1">Identifiant LIEU</label>
+                                    <input class="form-control" id="name" readonly="readonly" name="id"  type="text"  th:field="*{id}" required/>
+                                </div>
+                                <div class="form-group form-icon-group">
+                                 <label for="exampleFormControlSelect1">Nom LIEU</label>
+                                    <input class="form-control" id="name" name="nom" placeholder="Nom*" type="text"  th:field="*{nom}" required/>
+                                </div>
+                                <div class="form-group form-icon-group">
+                                  <label for="exampleFormControlSelect1">USER DE LIEU</label>
+							    <select class="form-control" id="exampleFormControlSelect1" name="idUser" >
+							      <option>Faites votre choix</option>
+							      	<option th:each="u:${liste_users}" th:value="${u.id}" th:text="${u.nom + ' ' +u.prenom}">
+					
+							    </select>
+                                </div>
+                                
+                                <div class="form-group text-center">
+                                 <input type="submit" value="Valider" name="valider" class="btn btn-primary btn-icon btn-icon-right" />
+                                    
+                                </div>
+                            </form>
+         
+                           
+         
+                        </div>
+                    </div>
+                </div>
+            </section>
+</body>
+</html>
